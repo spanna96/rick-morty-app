@@ -1,0 +1,141 @@
+.character-card {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+  background-color: #3b3e43;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 210px auto;
+  animation: appearing 0.15s ease-in-out;
+}
+
+.character-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  box-sizing: border-box;
+}
+
+.character-info h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+
+.character-image {
+  position: relative;
+  width: 100%;
+}
+
+.character-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-info {
+  color: white;
+  font-size: 16px;
+  line-height: 16px;
+  display: inline-flex;
+}
+
+.main-info nobr {
+  margin: 0 4px;
+}
+
+.status-indicator {
+  position: relative;
+  margin: auto 0;
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-indicator.alive {
+  background-color: lawngreen;
+}
+
+.status-indicator.dead {
+  background-color: red;
+}
+
+.status-indicator.unknown {
+  background-color: #9a9a9a;
+}
+
+.description {
+  position: relative;
+  width: 100%;
+  flex-grow: 3;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+}
+
+.label {
+  margin-bottom: 4px;
+  color: #9a9a9a;
+  font-size: 16px;
+}
+
+p.eart {
+  color: #e29346;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  .character-card {
+    grid-template-columns: 180px auto;
+    height: 180px;
+  }
+
+  .character-info h1 {
+    font-size: 20px;
+  }
+
+  .description {
+    padding-top: 14px;
+    font-size: 14px;
+  }
+
+  .label,
+  .main-info {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .character-card {
+    grid-template-columns: 120px auto;
+    height: fit-content;
+  }
+
+  .description {
+    padding-top: 8px;
+    font-size: 16px;
+    flex-grow: 0;
+  }
+  .description div:first-child {
+    margin-bottom: 16px;
+  }
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

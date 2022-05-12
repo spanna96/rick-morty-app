@@ -1,0 +1,40 @@
+.navigation-bar {
+  position: sticky;
+  bottom: 24px;
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #808080a1;
+  color: white;
+  border-radius: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 0 10px 6px;
+  user-select: none;
+}
+
+.arrow {
+  font-size: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation-bar {
+    width: 150px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .arrow {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}

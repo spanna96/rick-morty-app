@@ -1,0 +1,21 @@
+.app {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.characters-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px;
+  padding-bottom: 10%;
+}
+
+@media screen and (max-width: 900px) {
+  .characters-list {
+    grid-template-columns: 1fr;
+  }
+}
